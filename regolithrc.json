@@ -1,0 +1,2 @@
+{"databases": [
+ {"name": "ergs-public", "url": "https://github.com/ergs/rg-db-public.git", "public": true, "path": "db"}]}
