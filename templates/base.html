@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<!-- Strongly Typed by HTML5 UP html5up.net | @n33co -->
+<html>
+<head>
+  <title>{{title}}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+<body class="no-sidebar">
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <div id="header-wrapper">
+      <div id="header" class="container">
+        {% block header %}
+        {% endblock header %}
+        <!-- Logo 
+        <h1 id="logo"><a href="index.html">Strongly Typed</a></h1>
+        <p>A responsive HTML5 site template. Manufactured by HTML5 UP.</p>
+        -->
+
+        <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li><a class="icon fa-home" href="index.html"><span>Introduction</span></a></li>
+            <li>
+              <a href="#" class="icon fa-bar-chart-o"><span>Dropdown</span></a>
+              <ul>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Magna phasellus</a></li>
+                <li><a href="#">Etiam dolore nisl</a></li>
+                <li>
+                  <a href="#">Phasellus consequat</a>
+                  <ul>
+                    <li><a href="#">Magna phasellus</a></li>
+                    <li><a href="#">Etiam dolore nisl</a></li>
+                    <li><a href="#">Phasellus consequat</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Veroeros feugiat</a></li>
+              </ul>
+            </li>
+            <li><a class="icon fa-cog" href="left-sidebar.html"><span>Left Sidebar</span></a></li>
+            <li><a class="icon fa-retweet" href="right-sidebar.html"><span>Right Sidebar</span></a></li>
+            <li><a class="icon fa-sitemap" href="no-sidebar.html"><span>No Sidebar</span></a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </div> <!-- Header -->
+
+    <!-- Main -->
+    <div id="main-wrapper">
+      <div id="main" class="container">
+        <div id="content">
+          {% block content %}
+          {% endblock content %}
+        </div>
+      </div>
+    </div> <!-- Main -->
+
+    <!-- Footer -->
+    <div id="footer-wrapper">
+      <div id="footer" class="container">
+          {% block footer %}
+          {% endblock footer %}
+      </div>
+      <div id="copyright" class="container">
+        <ul class="links">
+          <li>&copy; Anthony Scopatz. All rights reserved.</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </div> <!-- Footer -->
+
+  </div> <!-- page-wrapper -->
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/skel-viewport.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
