@@ -1763,18 +1763,26 @@
 				font-size: 13pt;
 			}
 
-			h2 {
-				font-size: 1.65em;
-				font-weight: 400;
-				letter-spacing: 4px;
-				margin: 0 0 1.5em 0;
-				line-height: 1.75em;
-			}
+            h1 {
+                font-size: 1.85em;
+                font-weight: 400;
+                letter-spacing: 4px;
+                /* margin: 0 0 0.25em 0; */
+                line-height: 1.35em;
+            }
+
+            h2 {
+                font-size: 1.45em;
+                font-weight: 400;
+                letter-spacing: 4px;
+                /* margin: 0 0 0.25em 0; */
+                line-height: 1.25em;
+            }
 
 			h3 {
-				font-size: 1em;
+                font-size: 1.15em;
 				letter-spacing: 2px;
-				margin: 0 0 1.25em 0;
+                /* margin: 0 0 1.25em 0; */
 			}
 
 		/* Table */
