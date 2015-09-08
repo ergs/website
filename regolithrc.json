@@ -1,2 +1,6 @@
 {"databases": [
- {"name": "ergs-public", "url": "https://github.com/ergs/rg-db-public.git", "public": true, "path": "db"}]}
+ {"name": "ergs-public", "url": "https://github.com/ergs/rg-db-public.git", 
+  "public": true, "path": "db"}
+ ],
+ "cname": "www.ergs.sc.edu"
+}
