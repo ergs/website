@@ -1,5 +1,5 @@
 {"databases": [
- {"name": "ergs-public", "url": "https://github.com/ergs/rg-db-public.git", 
+ {"name": "ergs-public", "url": "git@github.com:ergs/rg-db-public.git", 
   "public": true, "path": "db"}
  ],
  "deploy": [
