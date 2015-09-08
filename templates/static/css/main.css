@@ -26,9 +26,13 @@
 		line-height: 1;
 	}
 
-	ol, ul {
-		list-style: none;
+    ul {
+        list-style: circle inside none;
 	}
+
+    ol {
+        list-style: decimal-leading-zero inside none;
+    }
 
 	blockquote, q {
 		quotes: none;
