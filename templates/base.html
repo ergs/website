@@ -20,15 +20,13 @@
 
         <!-- Nav -->
         <nav id="nav">
-          <ul>
+          <ul style="list-style:none;">
             <li><a class="icon fa-home" href="{{root}}/index.html"><span>Ergs</span></a></li>
             <li>
               <a class="icon fa-users" href="{{root}}/people"><span>People</span></a>
-              <ul>
-                {% for p in people %}
-                  <li><a href="{{root}}/people/{{p['_id']}}.html">{{p['name']}}</li>
-                {% endfor %}
-              </ul>
+              <ul style="list-style:none;">{% for p in people %}
+                <li><a href="{{root}}/people/{{p['_id']}}.html">{{p['name']}}</a></li>
+              {% endfor %}</ul>
             </li>
             <li><a class="icon fa-cog" href="{{root}}/projects.html"><span>Projects</span></a></li>
             <li><a class="icon fa-user-plus" href="{{root}}/jobs"><span>Jobs</span></a></li>
