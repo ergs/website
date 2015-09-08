@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block header %}
+<img src="{{static}}/logo-banner.png" /><br/><br/>
+{% endblock header %}
+{% block content %}
+<h1>About Us</h1>
+<b>ERGS</b>, or <i>Energy Research Group: Scopatz</i>, is the Computational 
+<a href="http://www.me.sc.edu/nuclear/">Nuclear Engineering</a>
+research group at the <a href="http://sc.edu/">University of South Carolina</a>. Our
+focus is on uncertainty quantification & predictive modeling, nuclear fuel cycle
+simulation, and improving nuclear engineering techniques through automation.
+
+<hr/>
+<h1>News</h1>
+
+
+<hr/>
+<h1>Who are we?</h1>
+{% for p in people %}
+  <a href="{{root}}/people/{{p['_id']}}.html">
+    <img src="{{p.get('avatar')}}" style="width:100px;height:100px;"/>
+  </a>
+  <h3><a href="{{root}}/people/{{p['_id']}}.html">{{p['title']}} {{p['name']}}</a></h3>
+  <ul>
+    <li><b>Position:</b> {{p['position'].capitalize()}}</li>
+  </ul>
+{% endfor %}
+{% endblock content %}
+{% block footer %}
+Feel free to contact ERGS by emailing <b>scopatz</b> <i>(AT)</i> <b>cec.sc.edu</b>.
+{% endblock footer %}
