@@ -1,6 +1,7 @@
-{"databases": [
- {"name": "ergs-public", "url": "git@github.com:ergs/rg-db-public.git", 
-  "public": true, "path": "db"}
+{"groupname": "ERGS",
+ "databases": [
+  {"name": "ergs-public", "url": "git@github.com:ergs/rg-db-public.git", 
+   "public": true, "path": "db"}
  ],
  "deploy": [
   {"name": "ergs.github.io",
