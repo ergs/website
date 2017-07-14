@@ -26,5 +26,5 @@ install:
 
 script:
   - regolith build html;
-    doctr deploy --deploy-repo ergs/twofcs.ergs.sc.edu .;
+    doctr deploy --deploy-repo ergs/ergs.github.io _build/html;
 
