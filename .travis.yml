@@ -1,0 +1,30 @@
+language: python
+env:
+  global:
+    - secure: "VQmxw+HfkGaDtPqZGq9TWqXq9Rikv4itHw8tAQ+YqZBYDIP+68NcNEV092NR/tN3E+4gWLLaS6vezeasBBecq+vZyjJCZEAZt5L07Dgomrtz4GrSt+depBy0DQLy2utOxjEE4+KwISkwNbMgmBBzkp+7FSxYo0ZMbDnmup6S2YZOB/3nXSLvZrV70SMfUizUHneiMWjflWXl5svFxhz5WRwlv1ptMAA2zodsYkXBclIgSeXPZs6S8BcNW0ilzKkmWulT13VQz4/rulS74HSTXLuLfHWn3I3SbRps6k/hLAhbF8ZUmWfskYAo+MSNFASo9sb/RRCCCbfbUlqkpzIb/yoiDHVQbqCEK6qE65GxYImxLVzmRA62CGZCSnuDCn+6v1CKfyY5keGl4twXxJc2cuxaFrPfVwGh5e5O6qfPVvV+oQbDO6S5qmUwBp3cF9PG9XBabF7bTN5j0+cMn0I+0fzGSVEEpx9sPvbIO2DolHJLG3LkPr2Mj6sJ8+qLFYHJq4UiyGEMMjcDl7tAxH79+l45bvQcAR2ZqwvPk7brFr1wdDqzTuX4iPtImystl7uCLHcRTYz7uWJ7iE65AVOnB5u4mLRgU+xuLpV/yy9zTpOe74dBWqbNm0BTkL+TcvdqPt7tLMVSbJkEoo/NXxmhkgr0WHpvQIOYQedqmvnp3Eg="
+
+matrix:
+  include:
+    - os: linux
+      python: 3.6
+      env:
+        - BUILD_DOCS=true
+
+before_install:
+  - URL="https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh";
+    wget "${URL}" -O miniconda.sh;
+    bash miniconda.sh -b -p $HOME/miniconda;
+    export PATH="$HOME/miniconda/bin:$PATH";
+    hash -r;
+    conda config --set always_yes yes --set changeps1 no;
+    conda config --add channels conda-forge;
+    conda update -q conda;
+    conda info -a;
+
+install:
+  - conda install doctr regolith;
+
+script:
+  - regolith build html;
+    doctr deploy --deploy-repo ergs/twofcs.ergs.sc.edu .;
+
