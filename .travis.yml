@@ -26,5 +26,5 @@ install:
 
 script:
   - regolith build html;
-    doctr deploy --deploy-repo ergs/ergs.github.io .;
+    doctr deploy --deploy-repo ergs/ergs.github.io --deploy-branch-name master .;
 
